@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Tradji | Kaza Tespit Asistanı</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="logo">T</div>
+        <div>
+          <strong>Tradji</strong>
+          <span>Kaza tespit asistanı</span>
+        </div>
+      </div>
+      <div class="status-pill">MVP Demo</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">KAZA ANINDA DAHA AZ FORM, DAHA FAZLA REHBERLİK</p>
+        <h1>Kaza tespit tutanağını adım adım oluştur.</h1>
+        <p class="lead">Fotoğrafları ekle, konumu al, taraf bilgilerini gir, beyanını sesle aktar ve tutanağını oluştur.</p>
+      </div>
+      <div class="hero-card">
+        <span class="hero-icon">⚡</span>
+        <div><b>Hedef</b><br><small>Stresli bir anda manuel veri girişini minimuma indirmek.</small></div>
+      </div>
+    </section>
+
+    <nav class="steps" aria-label="İşlem adımları">
+      <button class="step active" data-step="1"><span>1</span>Kaza</button>
+      <button class="step" data-step="2"><span>2</span>Taraflar</button>
+      <button class="step" data-step="3"><span>3</span>Belgeler</button>
+      <button class="step" data-step="4"><span>4</span>Kroki</button>
+      <button class="step" data-step="5"><span>5</span>Tutanak</button>
+    </nav>
+
+    <section class="panel active" id="panel-1">
+      <div class="panel-heading">
+        <div><span class="kicker">ADIM 1</span><h2>Kaza bilgileri</h2></div>
+        <button class="ghost" id="locationBtn">📍 Konumu otomatik al</button>
+      </div>
+      <div class="grid two">
+        <label>Tarih<input id="accidentDate" type="date" /></label>
+        <label>Saat<input id="accidentTime" type="time" /></label>
+        <label class="full">Konum / Adres<input id="location" placeholder="Konum izni verirsen otomatik doldurulur" /></label>
+        <label class="full upload">Kaza fotoğrafları<input id="accidentPhotos" type="file" accept="image/*" multiple /><span>📷 Fotoğraf seç veya kameradan ekle</span></label>
+      </div>
+      <div id="photoPreview" class="photo-preview"></div>
+    </section>
+
+    <section class="panel" id="panel-2">
+      <div class="panel-heading"><div><span class="kicker">ADIM 2</span><h2>Sürücü ve araç bilgileri</h2></div></div>
+      <div class="party-grid">
+        <article class="party-card">
+          <div class="party-title"><span>A</span><h3>Benim aracım</h3></div>
+          <label>Ad Soyad<input id="aName" placeholder="Ad Soyad" /></label>
+          <label>Plaka<input id="aPlate" placeholder="34 ABC 123" /></label>
+          <label>Telefon<input id="aPhone" placeholder="05xx xxx xx xx" /></label>
+          <label>Sigorta Şirketi<input id="aInsurance" placeholder="Sigorta şirketi" /></label>
+        </article>
+        <article class="party-card">
+          <div class="party-title orange"><span>B</span><h3>Karşı taraf</h3></div>
+          <label>Ad Soyad<input id="bName" placeholder="Ad Soyad" /></label>
+          <label>Plaka<input id="bPlate" placeholder="34 XYZ 987" /></label>
+          <label>Telefon<input id="bPhone" placeholder="05xx xxx xx xx" /></label>
+          <label>Sigorta Şirketi<input id="bInsurance" placeholder="Sigorta şirketi" /></label>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-3">
+      <div class="panel-heading"><div><span class="kicker">ADIM 3</span><h2>Belgeleri ekle</h2></div><span class="hint">Faz 2: OCR ile otomatik okuma</span></div>
+      <div class="doc-grid">
+        <label class="doc-card">🪪<b>Ehliyet</b><span>Fotoğraf yükle</span><input type="file" accept="image/*" /></label>
+        <label class="doc-card">🚘<b>Ruhsat</b><span>Fotoğraf yükle</span><input type="file" accept="image/*" /></label>
+        <label class="doc-card">🛡️<b>Sigorta Poliçesi</b><span>Fotoğraf yükle</span><input type="file" accept="image/*" /></label>
+      </div>
+      <div class="notice">💡 Gelecek sürümde belge fotoğrafından plaka, kimlik, poliçe ve araç alanlarının otomatik doldurulması hedefleniyor.</div>
+    </section>
+
+    <section class="panel" id="panel-4">
+      <div class="panel-heading"><div><span class="kicker">ADIM 4</span><h2>Kaza krokisi ve beyan</h2></div></div>
+      <div class="sketch-wrap">
+        <div class="road-canvas">
+          <div class="road road-v"></div><div class="road road-h"></div>
+          <div class="car car-a" id="carA">A</div>
+          <div class="car car-b" id="carB">B</div>
+          <span class="drag-note">Araçları sürükleyerek konumlandır</span>
+        </div>
+        <div class="statement">
+          <label>Kaza beyanı<textarea id="statement" rows="7" placeholder="Kazayı kendi cümlelerinle anlat veya mikrofonu kullan..."></textarea></label>
+          <button class="voice" id="voiceBtn">🎙️ Sesli anlatımı başlat</button>
+          <small>Tarayıcı destekliyorsa konuşman metne dönüştürülür.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-5">
+      <div class="panel-heading"><div><span class="kicker">ADIM 5</span><h2>Tutanak önizleme</h2></div><button class="primary" id="printBtn">🖨️ Yazdır / PDF Kaydet</button></div>
+      <article class="report" id="report">
+        <div class="report-head"><div><b>TRADJI</b><span>Dijital Kaza Tespit Taslağı</span></div><div id="reportDate"></div></div>
+        <div class="report-section"><h4>Kaza Bilgileri</h4><p id="reportAccident">Henüz bilgi girilmedi.</p></div>
+        <div class="report-columns">
+          <div><h4>A Aracı</h4><p id="reportA">Henüz bilgi girilmedi.</p></div>
+          <div><h4>B Aracı</h4><p id="reportB">Henüz bilgi girilmedi.</p></div>
+        </div>
+        <div class="report-section"><h4>Sürücü Beyanı</h4><p id="reportStatement">Henüz beyan girilmedi.</p></div>
+        <div class="signature-grid"><div>Taraf A İmza</div><div>Taraf B İmza</div></div>
+      </article>
+      <p class="legal-note">Bu ekran yatırımcı ve ürün doğrulama amacıyla hazırlanmış MVP demosudur. Resmî belge geçerliliği ayrıca doğrulanmalıdır.</p>
+    </section>
+
+    <footer class="actionbar">
+      <button class="secondary" id="prevBtn" disabled>← Geri</button>
+      <div><b id="stepCounter">1 / 5</b><span> Demo akışı</span></div>
+      <button class="primary" id="nextBtn">Devam →</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
