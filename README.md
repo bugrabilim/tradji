@@ -2,6 +2,8 @@
 
 Tradji, maddi hasarlı trafik kazalarında kaza tespit tutanağı hazırlama sürecini sadeleştirmeyi amaçlayan web tabanlı bir MVP prototipidir.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbugrabilim%2Ftradji&project-name=tradji&repository-name=tradji)
+
 ## MVP kapsamı
 
 - Sürücü ve araç bilgilerini form üzerinden toplama
@@ -15,6 +17,10 @@ Tradji, maddi hasarlı trafik kazalarında kaza tespit tutanağı hazırlama sü
 ## Çalıştırma
 
 Ek kurulum gerektirmez. `index.html` dosyasını doğrudan tarayıcıda açabilirsiniz. Konum ve mikrofon gibi tarayıcı izinleri için HTTPS veya localhost kullanılması önerilir.
+
+## Vercel
+
+Repo statik Vercel deploy'una hazırdır. `vercel.json`, güvenlik başlıkları ile geolocation, mikrofon ve kamera izin politikasını tanımlar. Git entegrasyonu kurulduktan sonra `main` dalına yapılan push'lar üretim deploy'unu otomatik tetikleyebilir.
 
 ## Faz 2 hedefleri
 
