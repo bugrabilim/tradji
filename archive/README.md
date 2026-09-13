@@ -1,32 +1,29 @@
-# Tradji Proje Arşivi
+# Tradji Proje Arsivi
 
-Bu klasör, Tradji projesi hakkında bu görüşmede alınan kararları, geliştirilen fikirleri, MVP yaklaşımını, teknik seçenekleri, entegrasyon hedeflerini ve hazırlanan görsel/sunum çıktılarının arşiv kopyalarını içerir.
+Bu klasor, Tradji projesi hakkinda bu gorusmede alinan kararlar, urun gereksinimleri, MVP yaklasimi, teknik tercihler, entegrasyon hedefleri, sunum icerikleri ve uretilen gorsel/sunum dosyalarinin yedegidir.
 
-## Arşiv içeriği
+## Metin arsivi
+- `01-proje-gecmisi.md`: Fikrin ortaya cikisi ve ana urun kararlari.
+- `02-urun-gereksinimleri.md`: Hedef kullanici, kullanici akisi ve MVP gereksinimleri.
+- `03-mvp-ve-fazlar.md`: Faz 0, Faz 1, Faz 2 ve ileri AI/B2B yol haritasi.
+- `04-teknolojik-yaklasimlar.md`: UCD, Agile, REST, OCR, konum, goruntu isleme, PDF ve ses tanima.
+- `05-entegrasyon-hedefleri.md`: Sigorta, kamu, polis ve diger entegrasyon hedefleri.
+- `06-sunum-icerigi.md`: Sunum hikayesi ve kullanilan temel anlatim.
+- `07-deger-onerisi.md`: Tradji'nin temel deger onerisi.
+- `08-prototip-ve-kod-notlari.md`: Colab, Pillow, Flask, web prototipi ve guncel kod notlari.
+- `09-belge-manifestosu.md`: Arsivdeki dosyalarin listesi.
+- `10-kronoloji.md`: Gorusmedeki urun kararlarinin kronolojik dokumu.
 
-- `Tradji_Gorusme_Arsivi.md`: Görüşmedeki tüm önemli proje bilgisini tek okunabilir dosyada birleştirir.
-- `Tradji_Gorusme_Arsivi.zip`: Ayrıntılı Markdown dokümanları, sunumlar ve görsellerin tam arşiv paketidir.
-- `artifacts/Tradji_Kaza_Tespit_Sunumu.pptx`: Tradji ana sunumu.
-- `artifacts/Tradji_Teknolojik_Yaklasimlar_Sunumu.pptx`: Teknolojik yaklaşımlar sunumu.
-- `artifacts/Tradji_Mockup.png`: Uygulama ekran mockup'ı.
-- `artifacts/Tradji.png`: Görüşmede kullanılan alternatif mockup adıyla arşiv kopyası.
-- `artifacts/kaza_tespit_tutanagi.png`: Boş kaza tespit tutanağı prototip görseli.
+## Uretilen belgeler
+- `artifacts/Tradji_Kaza_Tespit_Sunumu.pptx`
+- `artifacts/Tradji_Teknolojik_Yaklasimlar_Sunumu.pptx`
+- `artifacts/Tradji_Mockup.png`
+- `artifacts/Tradji.png`
+- `artifacts/kaza_tespit_tutanagi.png`
+- `Tradji_Gorusme_Arsivi.zip`
 
-## İçerik başlıkları
+## Yeniden uretilebilirlik
+`generate_mockups.py` ve `generate_presentations.py` gorsel belgeleri yeniden olusturur. `build_archive.py` tum Markdown ve artifact dosyalarini ZIP paketine alir. `.github/workflows/build-tradji-archive.yml` bu islemleri GitHub Actions uzerinde otomatik calistirir.
 
-Arşiv paketi içinde ayrıca şu ayrı dokümanlar yer alır:
-
-1. Proje geçmişi ve karar kaydı
-2. Ürün gereksinimleri
-3. MVP ve faz planı
-4. Teknolojik yaklaşımlar
-5. Entegrasyon hedefleri
-6. Sunum içeriği
-7. Değer önerisi
-8. Kod örnekleri
-9. Belge manifestosu
-10. Görüşme karar dökümü
-
-## Not
-
-Önceki sohbet mesajlarında oluşturulan geçici sandbox dosyalarının orijinal çalışma kopyaları artık aktif çalışma alanında bulunmadığından, sunum ve görsel dosyaları görüşmede yer alan içerik ve tasarım tarifleri esas alınarak yeniden oluşturulmuştur. Kritik bilgi ve kararlar ayrıca metinsel olarak yedeklenmiştir.
+## Onemli not
+Gorusmenin onceki asamalarinda uretilen gecici sandbox dosyalarinin birebir orijinal byte kopyalari aktif calisma alaninda artik bulunmadigi icin, sunum ve gorseller gorusmede korunan icerik ve tasarim kararlarina gore yeniden uretilmistir. Proje bilgisinin kendisi metin dokumanlarinda ayrica korunmaktadir.
