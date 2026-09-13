@@ -1,28 +1,41 @@
 # Tradji - Belge Manifestosu
 
-## Repo kokunde bulunan MVP
-- README.md
-- index.html
-- styles.css
-- app.js
+## Calisan MVP
+Repo kokunde:
+- `README.md`
+- `index.html`
+- `styles.css`
+- `app.js`
 
-## Arsiv dokumanlari
-- archive/README.md
-- archive/01-proje-gecmisi.md
-- archive/02-urun-gereksinimleri.md
-- archive/03-mvp-ve-fazlar.md
-- archive/04-teknolojik-yaklasimlar.md
-- archive/05-entegrasyon-hedefleri.md
-- archive/06-sunum-icerigi.md
-- archive/07-deger-onerisi.md
-- archive/10-gorusme-karar-dokumu.md
+## Bilgi arsivi
+`archive/` altinda:
+- `README.md`
+- `01-proje-gecmisi.md`
+- `02-urun-gereksinimleri.md`
+- `03-mvp-ve-fazlar.md`
+- `04-teknolojik-yaklasimlar.md`
+- `05-entegrasyon-hedefleri.md`
+- `06-sunum-icerigi.md`
+- `07-deger-onerisi.md`
+- `08-prototip-ve-kod-notlari.md`
+- `09-belge-manifestosu.md`
+- `10-kronoloji.md`
 
-## Yeniden olusturulacak dosyalar
-- archive/artifacts/Tradji_Kaza_Tespit_Sunumu.pptx
-- archive/artifacts/Tradji_Teknolojik_Yaklasimlar_Sunumu.pptx
-- archive/artifacts/Tradji_Mockup.png
-- archive/artifacts/Tradji.png
-- archive/artifacts/kaza_tespit_tutanagi.png
-- archive/Tradji_Gorusme_Arsivi.zip
+## Sunum ve gorseller
+`archive/artifacts/` altinda:
+- `Tradji_Kaza_Tespit_Sunumu.pptx`
+- `Tradji_Teknolojik_Yaklasimlar_Sunumu.pptx`
+- `Tradji_Mockup.png`
+- `Tradji.png`
+- `kaza_tespit_tutanagi.png`
 
-Onceki gecici calisma dosyalarinin aktif sandbox kopyalari kalmadigi icin sunum ve gorseller gorusmedeki icerik ve tasarim tarifleri temel alinarak yeniden uretilmektedir.
+## Toplu yedek
+- `archive/Tradji_Gorusme_Arsivi.zip`
+
+## Yeniden uretim kaynaklari
+- `archive/generate_mockups.py`
+- `archive/generate_presentations.py`
+- `archive/build_archive.py`
+- `.github/workflows/build-tradji-archive.yml`
+
+Gecici sandbox dosyalarinin birebir eski kopyalari erisilebilir olmadigindan gorsel belgeler gorusmede belirlenen icerik ve tasarima gore yeniden uretilmistir. Metinsel proje bilgisi ayri Markdown dosyalarinda korunur.
