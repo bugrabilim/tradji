@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'archive/*.md'
       - 'archive/generate_mockups.py'
       - 'archive/generate_presentations.py'
       - 'archive/build_archive.py'
