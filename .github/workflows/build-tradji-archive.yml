@@ -1,0 +1,42 @@
+name: Build Tradji archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'archive/rebuild_artifacts.py'
+      - '.github/workflows/build-tradji-archive.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install python-pptx Pillow
+
+      - name: Rebuild conversation archive
+        run: python archive/rebuild_artifacts.py
+
+      - name: Commit generated archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive
+          if git diff --cached --quiet; then
+            echo "Archive already up to date."
+          else
+            git commit -m "Build Tradji conversation archive [skip ci]"
+            git push
+          fi
